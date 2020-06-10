@@ -1,0 +1,7 @@
+language: crystal
+
+script:
+  - make
+  - sudo install -C lib/librinku.a /usr/lib/
+  - crystal spec
+  - crystal tool format --check

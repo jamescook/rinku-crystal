@@ -1,0 +1,12 @@
+name: rinku-crystal
+version: 0.1.0
+
+authors:
+  - James Cook <jcook.rubyist@gmail.com>
+
+crystal: 0.34.0
+
+license: MIT
+
+#postinstall: make
+
