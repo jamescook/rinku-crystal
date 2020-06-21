@@ -8,5 +8,9 @@ crystal: 0.34.0
 
 license: MIT
 
+development_dependencies:
+  autolink:
+    github: crystal-community/autolink.cr
+
 #postinstall: make
 
