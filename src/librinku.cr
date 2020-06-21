@@ -16,7 +16,6 @@ lib LibRinku
   fun bufnew(LibC::SizeT) : Buffer*
   fun bufput(Buffer*, Void*, LibC::SizeT) : Void
   fun bufrelease(Buffer*) : Void
-  fun bufreset(Buffer*) : Void
 
   # Callback to replace the text within the link, e.g. <a href="...">callback output goes here</a>
   alias Callback = (Buffer*, LibC::Char*, LibC::SizeT, Void*) ->

@@ -68,9 +68,8 @@ module Rinku
       return text
     end
 
-    output = String.new(buf[0].data)
-    # NOTE: LibRinku.bufrelease(buf) does not work correctly here. The buffer does not consistently reset and leaks between calls ...
-    LibC.free(buf)
+    output = String.new(buf[0].data, buf[0].size)
+    LibRinku.bufrelease(buf)
     output
   end
 end
