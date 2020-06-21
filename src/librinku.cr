@@ -1,9 +1,9 @@
 @[Link("rinku")]
 lib LibRinku
   enum AutolinkMode
-    AUTOLINK_URLS = 1 << 0
+    AUTOLINK_URLS   = 1 << 0
     AUTOLINK_EMAILS = 1 << 1
-    AUTOLINK_ALL = AUTOLINK_URLS | AUTOLINK_EMAILS
+    AUTOLINK_ALL    = AUTOLINK_URLS | AUTOLINK_EMAILS
   end
 
   struct Buffer
@@ -21,15 +21,14 @@ lib LibRinku
   alias Callback = (Buffer*, LibC::Char*, LibC::SizeT, Void*) ->
 
   fun autolink = rinku_autolink(
-    ob        : Buffer*,
-    text      : LibC::Char*,
-    size      : LibC::SizeT,
-    mode      : AutolinkMode,
-    flags     : LibC::UInt,
+    ob : Buffer*,
+    text : LibC::Char*,
+    size : LibC::SizeT,
+    mode : AutolinkMode,
+    flags : LibC::UInt,
     link_attr : LibC::Char*,
     skip_tags : LibC::Char**,
-    callback  : Callback,
-    payload   : Void*
-
-  ): LibC::Int
+    callback : Callback,
+    payload : Void*
+  ) : LibC::Int
 end

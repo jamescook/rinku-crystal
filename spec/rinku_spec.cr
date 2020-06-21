@@ -1,7 +1,7 @@
 require "./spec_helper"
 require "html"
 
-#puts Rinku.autolink("<pre>www.herewego.com</pre> www.herewego.com", LibRinku::AutolinkMode::AUTOLINK_URLS, skip_tags: StaticArray["pre"])
+# puts Rinku.autolink("<pre>www.herewego.com</pre> www.herewego.com", LibRinku::AutolinkMode::AUTOLINK_URLS, skip_tags: StaticArray["pre"])
 describe Rinku do
   urls = %w(
     http://www.rubyonrails.com
@@ -61,12 +61,11 @@ describe Rinku do
     Rinku.auto_link("[{((#{link_raw}))}]").should eq "[{((#{generate_result(link_raw)}))}]"
   end
 
-
   # TODO
   it "accepts HTML options" do
     text = "Welcome to my new blog at http://www.myblog.com/."
     result = "Welcome to my new blog at <a href=\"http://www.myblog.com/\" class=\"menu\" target=\"_blank\">http://www.myblog.com/</a>."
-    #Rinku.auto_link(text, html: {"class" => "menu", "target" => "_blank"}).should eq result
+    # Rinku.auto_link(text, html: {"class" => "menu", "target" => "_blank"}).should eq result
   end
 
   it "accepts multiple trailing punctuations" do
@@ -96,4 +95,3 @@ describe Rinku do
     end
   end
 end
-
