@@ -1,6 +1,6 @@
 # rinku-crystal
 
-WIP - Bindings for Rinku
+Bindings for Rinku, an autolinker
 
 ## Installation
 
